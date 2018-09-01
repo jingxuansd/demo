@@ -1,0 +1,11 @@
+spring:
+    datasource:
+        name: test
+        url: jdbc:mysql://127.0.0.1:3306/test
+        username: user001
+        password: !@#123qweASD
+        driver-class-name: com.mysql.jdbc.Driver
+        maxActive: 20
+        initialSize: 1
+        maxWait: 60000
+        minIdle: 1
