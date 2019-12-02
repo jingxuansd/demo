@@ -1,4 +1,4 @@
-package com.jx.esclient.demo;
+package com.jingxuan.demo;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
