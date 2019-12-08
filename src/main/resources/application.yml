@@ -9,6 +9,12 @@ spring:
     initialSize: 1
     maxWait: 60000
     minIdle: 1
+  cluster:
+    name: jingxuan
+  application:
+    name: demo
 mybatis:
   type-aliases-package: com.jingxuan.demo.model
   mapper-locations: classpath:mapper/*.xml
+logging:
+  path: /Users/jingxuan/log
