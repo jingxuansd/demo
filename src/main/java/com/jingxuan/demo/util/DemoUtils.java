@@ -1,4 +1,4 @@
-package com.jingxuan.demo.Util;
+package com.jingxuan.demo.util;
 
 /**
  * @Author: Xuan Jing

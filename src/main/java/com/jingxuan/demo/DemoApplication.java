@@ -1,19 +1,14 @@
 package com.jingxuan.demo;
 
-import com.jingxuan.demo.model.User;
 import lombok.extern.slf4j.Slf4j;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
+import org.springframework.boot.web.servlet.ServletComponentScan;
 
 @SpringBootApplication
 @MapperScan("com.jingxuan.demo.mapper")
+@ServletComponentScan(basePackages = {"com.jingxuan.demo.filter"})
 @Slf4j
 public class DemoApplication {
 
