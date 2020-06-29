@@ -13,6 +13,9 @@ spring:
     name: jingxuan
   application:
     name: demo
+  flyway:
+    enabled: true
+    schemas: test
 mybatis:
   type-aliases-package: com.jingxuan.demo.model
   mapper-locations: classpath:mapper/*.xml
