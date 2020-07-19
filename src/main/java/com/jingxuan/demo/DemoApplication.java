@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 
 @SpringBootApplication
-@MapperScan("com.jingxuan.demo.mapper")
+@MapperScan(basePackages = {"com.jingxuan.demo.dao", "com.jingxuan.demo.mapper"})
 @ServletComponentScan(basePackages = {"com.jingxuan.demo.filter"})
 @Slf4j
 public class DemoApplication {

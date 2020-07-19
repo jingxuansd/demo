@@ -11,7 +11,7 @@ import java.io.IOException;
  * @Author: Xuan Jing
  * @Date: 2020/6/25 10:40 PM
  */
-@WebFilter(filterName = "test", urlPatterns = "/*")
+@WebFilter(filterName = "test", urlPatterns = "/test")
 @Slf4j
 public class UrlFilter implements Filter {
 
