@@ -17,7 +17,7 @@
               class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>${logging.path}/${application.name}.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${logging.path}/${application.name}-%d{yyyy-MM-dd_HH}.%i.zip</fileNamePattern>
+            <fileNamePattern>${logging.path}/${application.name}/info-%d{yyyy-MM-dd_HH}.%i.log</fileNamePattern>
             <timeBasedFileNamingAndTriggeringPolicy
                     class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
                 <maxFileSize>100MB</maxFileSize>
