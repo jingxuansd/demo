@@ -8,4 +8,5 @@ import com.jingxuan.demo.entity.UserInfoEntity;
  * @Date: 2020/7/13 10:29 PM
  */
 public interface UserInfoService extends IService<UserInfoEntity> {
+    Integer updateAge(Long id) throws InterruptedException;
 }

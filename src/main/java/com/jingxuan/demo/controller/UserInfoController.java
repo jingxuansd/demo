@@ -186,4 +186,10 @@ public class UserInfoController {
         map.put("fraction",10L);
         userInfoService.removeByMap(map);
     }
+
+    @ApiOperation("年龄自增")
+    @GetMapping("/updateAge/{id}")
+    public Integer updateAge(@PathVariable("id") Long id) throws InterruptedException {
+        return userInfoService.updateAge(id);
+    }
 }

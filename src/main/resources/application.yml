@@ -16,15 +16,14 @@ spring:
     name: demo
   flyway:
     enabled: true
-    schemas: test
-  kafka:
-    bootstrap-servers: 127.0.0.1:9092
-    producer:
-      retries: 1
-      acks: 1
-      batch-size: 16284
-    consumer:
-      enable-auto-commit: true
+#  kafka:
+#    bootstrap-servers: 127.0.0.1:9092
+#    producer:
+#      retries: 1
+#      acks: 1
+#      batch-size: 16284
+#    consumer:
+#      enable-auto-commit: true
 logging:
   path: /Users/jingxuan/log
 mybatis-plus:

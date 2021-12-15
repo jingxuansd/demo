@@ -14,5 +14,13 @@ public final class DemoUtils {
 
     public static void main(String[] args) {
         System.out.println(DemoUtils.DEMO);
+        System.out.println(getStartIndex(1));
+    }
+
+    static Integer getStartIndex(Integer maxId) {
+        if (maxId < 10000000) {
+            return 0;
+        }
+        return maxId - (maxId % 10000000 + 10000000);
     }
 }
