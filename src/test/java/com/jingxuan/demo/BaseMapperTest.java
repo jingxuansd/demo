@@ -10,6 +10,7 @@ import org.junit.runner.RunWith;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.time.ZoneId;
@@ -26,7 +27,7 @@ import static com.wix.mysql.distribution.Version.v5_7_17;
  */
 @ActiveProfiles("test")
 @SpringBootTest
-@RunWith(SpringRunner.class)
+@RunWith(SpringJUnit4ClassRunner.class)
 public class BaseMapperTest {
     private static EmbeddedMysql embeddedMysql;
 
