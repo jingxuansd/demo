@@ -2,6 +2,7 @@ package com.jingxuan.demo.kafka;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
+import org.springframework.context.annotation.Profile;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @Slf4j
+@Profile("!test")
 public class Consumer {
     @KafkaListener(topics = {"topic_a"}, groupId = "test_group_1")
     public void onMessage1(ConsumerRecord<?, ?> record) {
