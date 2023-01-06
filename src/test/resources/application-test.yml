@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    name: test
+    url: jdbc:mysql://127.0.0.1:3307/test
+    username: test
+    password: test
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    type: com.alibaba.druid.pool.DruidDataSource
+  cluster:
+    name: jingxuan
+  application:
+    name: demo
+  flyway:
+    enabled: false
+logging:
+  path: /Users/jingxuan/log
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+      field-strategy: NOT_EMPTY
+      db-type: MYSQL
+  configuration:
+    map-underscore-to-camel-case: true
+    call-setters-on-nulls: true

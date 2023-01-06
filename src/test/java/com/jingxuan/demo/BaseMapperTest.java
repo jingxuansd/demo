@@ -18,16 +18,15 @@ import java.util.List;
 import java.util.TimeZone;
 
 import static com.wix.mysql.ScriptResolver.classPathScript;
-import static com.wix.mysql.distribution.Version.v5_7_19;
+import static com.wix.mysql.distribution.Version.v5_7_17;
 
 /**
  * @Author: Xuan Jing
  * @Date: 2020/6/25 11:38 PM
  */
-@RunWith(SpringRunner.class)
-@SpringBootTest
 @ActiveProfiles("test")
-@MapperScan("com.jingxuan.demo.mapper")
+@SpringBootTest
+@RunWith(SpringRunner.class)
 public class BaseMapperTest {
     private static EmbeddedMysql embeddedMysql;
 
@@ -42,7 +41,7 @@ public class BaseMapperTest {
     @BeforeClass
     public static void start() {
         if (embeddedMysql == null) {
-            MysqldConfig config = MysqldConfig.aMysqldConfig(v5_7_19)
+            MysqldConfig config = MysqldConfig.aMysqldConfig(v5_7_17)
                     .withPort(dbPort)
                     .withTimeZone(TimeZone.getTimeZone(ZoneId.of("UTC")))
                     .withUser("test", "test")

@@ -6,6 +6,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.math.BigDecimal;
+
 import static org.junit.Assert.*;
 
 /**
@@ -24,27 +26,20 @@ public class UserMapperTest extends BaseMapperTest {
 
     @Test
     public void deleteByPrimaryKey() {
+        assertTrue(userMapper.deleteByPrimaryKey(2) > 0);;
     }
 
     @Test
     public void insert() {
-    }
-
-    @Test
-    public void insertSelective() {
+        User user = new User();
+        user.setName("jingxuan002");
+        user.setUid(321L);
+        assertTrue(userMapper.insert(user)>0);
     }
 
     @Test
     public void selectByPrimaryKey() {
         User user = userMapper.selectByPrimaryKey(1);
         assertNotNull(user);
-    }
-
-    @Test
-    public void updateByPrimaryKeySelective() {
-    }
-
-    @Test
-    public void updateByPrimaryKey() {
     }
 }
