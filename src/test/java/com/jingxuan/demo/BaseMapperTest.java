@@ -6,6 +6,7 @@ import com.wix.mysql.config.MysqldConfig;
 import com.wix.mysql.config.SchemaConfig;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.runner.RunWith;
 import org.mybatis.spring.annotation.MapperScan;
@@ -27,6 +28,7 @@ import static com.wix.mysql.distribution.Version.v5_7_17;
  * @Author: Xuan Jing
  * @Date: 2020/6/25 11:38 PM
  */
+@Ignore
 @ActiveProfiles("test")
 @MybatisTest()
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)

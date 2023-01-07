@@ -1,23 +1,11 @@
 package com.jingxuan.demo.mapper;
 
-import com.jingxuan.demo.BaseMapperTest;
-import com.jingxuan.demo.BaseTest;
-import com.jingxuan.demo.MySQLExtension;
 import com.jingxuan.demo.model.User;
 
-import org.junit.Before;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.junit.runner.RunWith;
 import org.mybatis.spring.boot.test.autoconfigure.MybatisTest;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.test.context.ActiveProfiles;
-import org.springframework.test.context.jdbc.Sql;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
-import org.springframework.test.context.junit4.SpringRunner;
-
-import java.math.BigDecimal;
 
 import static org.junit.Assert.*;
 
