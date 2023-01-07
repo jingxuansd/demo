@@ -1,10 +1,12 @@
 package com.jingxuan.demo.mapper;
 
 import com.jingxuan.demo.model.User;
+import org.apache.ibatis.annotations.Mapper;
 
 /**
  * @author jingxuan
  */
+@Mapper
 public interface UserMapper {
 
     /**

@@ -1,10 +1,21 @@
 package com.jingxuan.demo.mapper;
 
 import com.jingxuan.demo.BaseMapperTest;
+import com.jingxuan.demo.BaseTest;
+import com.jingxuan.demo.MySQLExtension;
 import com.jingxuan.demo.model.User;
+
 import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.runner.RunWith;
+import org.mybatis.spring.boot.test.autoconfigure.MybatisTest;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
+import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.jdbc.Sql;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.springframework.test.context.junit4.SpringRunner;
 
 import java.math.BigDecimal;
 
@@ -14,15 +25,13 @@ import static org.junit.Assert.*;
  * @Author: Xuan Jing
  * @Date: 2020/6/25 11:31 PM
  */
-public class UserMapperTest extends BaseMapperTest {
+@MybatisTest()
+@ActiveProfiles("test")
+public class UserMapperTest {
 
     @Autowired
     private UserMapper userMapper;
 
-    @Before
-    public void init() {
-        executeScriptsWithReLoadSchema("/db/user_insert.sql");
-    }
 
     @Test
     public void deleteByPrimaryKey() {

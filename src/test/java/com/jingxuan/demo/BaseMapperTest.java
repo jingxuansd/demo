@@ -6,12 +6,14 @@ import com.wix.mysql.config.MysqldConfig;
 import com.wix.mysql.config.SchemaConfig;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.runner.RunWith;
 import org.mybatis.spring.annotation.MapperScan;
+import org.mybatis.spring.boot.test.autoconfigure.MybatisTest;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.time.ZoneId;
 import java.util.LinkedList;
@@ -26,8 +28,8 @@ import static com.wix.mysql.distribution.Version.v5_7_17;
  * @Date: 2020/6/25 11:38 PM
  */
 @ActiveProfiles("test")
-@SpringBootTest
-@RunWith(SpringJUnit4ClassRunner.class)
+@MybatisTest()
+@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 public class BaseMapperTest {
     private static EmbeddedMysql embeddedMysql;
 

@@ -16,10 +16,4 @@ public class User {
     private Long uid;
 
     private String name;
-
-    private String email;
-
-    private String address;
-
-    private BigDecimal amount;
 }

@@ -1,28 +1,13 @@
 spring:
   datasource:
-    name: test
-    url: jdbc:mysql://127.0.0.1:3307/test
-    username: test
-    password: test
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    maxActive: 20
-    initialSize: 1
-    maxWait: 60000
-    minIdle: 1
-    type: com.alibaba.druid.pool.DruidDataSource
-  cluster:
-    name: jingxuan
-  application:
-    name: demo
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:test;DATABASE_TO_UPPER=false
+    username: sa
+    password:
+    schema:
+      - classpath:db/init/init.sql
+      - classpath:db/user_insert.sql
   flyway:
     enabled: false
-mybatis-plus:
+mybatis:
   mapper-locations: classpath:mapper/*.xml
-  global-config:
-    db-config:
-      id-type: auto
-      field-strategy: NOT_EMPTY
-      db-type: MYSQL
-  configuration:
-    map-underscore-to-camel-case: true
-    call-setters-on-nulls: true
