@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:test;DATABASE_TO_UPPER=false
+    username: sa
+    password:
+    schema:
+      - classpath:db/init/init.sql
+      - classpath:db/user_insert.sql
+  flyway:
+    enabled: false
+mybatis:
+  mapper-locations: classpath:mapper/*.xml

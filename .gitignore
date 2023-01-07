@@ -29,3 +29,7 @@ mvnw*
 .mvn
 
 **/.DS_Store
+demo.log
+demo
+
+bootstrap*

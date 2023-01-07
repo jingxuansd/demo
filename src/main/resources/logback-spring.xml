@@ -6,7 +6,6 @@
 
     <springProperty name="cluster.name" source="spring.cluster.name" defaultValue="defaultCluster"/>
     <springProperty name="application.name" source="spring.application.name" defaultValue="bootstrap"/>
-    <property name="logging.path" value="/Users/jingxuan/log"/>
     <property name="logging.pattern.console"
               value="%d{yyyy-MM-dd HH:mm:ss.SSSXXX} %-5level [${cluster.name}] [${application.name}] [%X{X-Amzn-Trace-Id:-} %X{X-B3-TraceId:-} %X{X-B3-SpanId:-} %X{X-Span-Export:-} %X{X-SN-REQUEST-ID:-} %X{X-SN-EXT-ID:-}]${PID:- } --- [%15.15t] %-40.40logger{39} [%M] %m%n"/>
 
@@ -15,9 +14,9 @@
 
     <appender name="logFile"
               class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${logging.path}/${application.name}.log</file>
+        <file>${application.name}.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${logging.path}/${application.name}/info-%d{yyyy-MM-dd_HH}.%i.log</fileNamePattern>
+            <fileNamePattern>${application.name}/info-%d{yyyy-MM-dd_HH}.%i.log</fileNamePattern>
             <timeBasedFileNamingAndTriggeringPolicy
                     class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
                 <maxFileSize>100MB</maxFileSize>
