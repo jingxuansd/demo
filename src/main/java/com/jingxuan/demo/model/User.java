@@ -1,9 +1,6 @@
 package com.jingxuan.demo.model;
 
 import lombok.*;
-import org.mapstruct.TargetType;
-
-import java.math.BigDecimal;
 
 @Builder
 @Getter

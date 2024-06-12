@@ -4,7 +4,7 @@ package com.jingxuan.demo.util;
  * @Author: Xuan Jing
  * @Date: 2020/3/10 4:50 PM
  */
-public final class DemoUtils {
+final class DemoUtils {
 
     static {
         System.out.println("DemoUtils init.");
