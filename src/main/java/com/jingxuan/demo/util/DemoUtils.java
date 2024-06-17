@@ -10,9 +10,15 @@ final class DemoUtils {
         System.out.println("DemoUtils init.");
     }
 
-    private static final String DEMO = "demo";
 
     public static void main(String[] args) {
-        System.out.println(DemoUtils.DEMO);
+        printFun(null);
+    }
+
+    private static void printFun(String fun) {
+        if (fun == null) {
+            throw new RuntimeException("The function input is null.");
+        }
+        System.out.println(fun.length());
     }
 }
