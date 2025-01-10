@@ -15,7 +15,7 @@ import java.io.IOException;
 @Slf4j
 public class UrlFilter implements Filter {
 
-    private static String INFO = "info";
+    private static String info = "info";
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
@@ -29,7 +29,7 @@ public class UrlFilter implements Filter {
         HttpServletRequest req = (HttpServletRequest) servletRequest;
         String requestURI = req.getRequestURI();
         log.info("--------------------->过滤器：请求地址"+requestURI);
-        if(!requestURI.contains(INFO)){
+        if(!requestURI.contains(info)){
             servletRequest.getRequestDispatcher("/failed").forward(servletRequest, servletResponse);
         }else{
             filterChain.doFilter(servletRequest, servletResponse);

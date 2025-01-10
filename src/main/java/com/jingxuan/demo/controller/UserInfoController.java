@@ -30,8 +30,7 @@ public class UserInfoController {
     @ApiOperation("根据ID获取用户信息")
     @GetMapping("/{id}")
     public UserInfoEntity getInfo(@PathVariable("id") String userId){
-        UserInfoEntity userInfoEntity = userInfoService.getById(userId);
-        return userInfoEntity;
+        return userInfoService.getById(userId);
     }
     /**
      * 查询全部信息
@@ -43,8 +42,7 @@ public class UserInfoController {
     @ApiOperation("查询全部信息")
     @PostMapping("/getList")
     public List<UserInfoEntity> getList(){
-        List<UserInfoEntity> userInfoEntityList = userInfoService.list();
-        return userInfoEntityList;
+        return userInfoService.list();
     }
     /**
      * 分页查询全部数据
@@ -74,8 +72,7 @@ public class UserInfoController {
         Map<String,Object> map = new HashMap<>();
         //kay是字段名 value是字段值
         map.put("age",20);
-        Collection<UserInfoEntity> userInfoEntityList = userInfoService.listByMap(map);
-        return userInfoEntityList;
+        return userInfoService.listByMap(map);
     }
     /**
      * 新增用户信息

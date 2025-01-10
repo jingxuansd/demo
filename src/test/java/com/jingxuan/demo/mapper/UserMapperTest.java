@@ -23,7 +23,7 @@ public class UserMapperTest {
 
     @Test
     public void deleteByPrimaryKey() {
-        assertTrue(userMapper.deleteByPrimaryKey(2) > 0);;
+        assertTrue(userMapper.deleteByPrimaryKey(2) > 0);
     }
 
     @Test
